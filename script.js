@@ -3,9 +3,8 @@
 var startButton = document.getElementById('start')
 
 startButton.addEventListener('click', function () {
-  var answer = window.prompt('Ready to start?')
-  answer = answer.toLowerCase().trim()
-  if (answer === 'yes') {
+  var getConfirmation = window.confirm('Ready to start?')
+  if (getConfirmation === true) {
     window.alert('Awesome! let\'s go.')
     var petChoice = window.prompt('What is your ideal pet (cat, dog, or snake)?')
     var bestPet = petChoice.toLowerCase().trim()
@@ -46,7 +45,5 @@ startButton.addEventListener('click', function () {
         window.alert('Getting the same number of pets you had when you were growing up? Sounds like a safe bet.')
       }
     }
-  } else {
-    window.alert('Okay then, whenever you are ready')
   }
 })
